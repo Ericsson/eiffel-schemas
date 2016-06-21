@@ -64,10 +64,7 @@
                 "type": "string"
               },
               "value": {
-                "type": "array",
-                "items": {
-                  "type": "integer"
-                }
+                "type": "unconstrained"
               }
             },
             "required": [
