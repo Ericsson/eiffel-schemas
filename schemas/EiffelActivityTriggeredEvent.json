@@ -27,7 +27,8 @@
         "type",
         "version",
         "time"
-      ]
+      ],
+      "additionalProperties": false
     },
     "data": {
       "type": "object",
@@ -38,19 +39,23 @@
         "category": {
           "type": "string"
         },
-        "trigger": {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string"
+        "triggers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
             },
-            "description": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "type"
-          ]
+            "required": [
+              "type"
+            ],
+            "additionalProperties": false
+          }
         },
         "executionType": {
           "type": "string"
@@ -64,19 +69,20 @@
                 "type": "string"
               },
               "value": {
-                "type": "unconstrained"
               }
             },
             "required": [
               "key",
               "value"
-            ]
+            ],
+            "additionalProperties": false
           }
         }
       },
       "required": [
         "name"
-      ]
+      ],
+      "additionalProperties": false
     },
     "links": {
       "type": "array",
@@ -93,7 +99,8 @@
         "required": [
           "type",
           "target"
-        ]
+        ],
+        "additionalProperties": false
       }
     }
   },
